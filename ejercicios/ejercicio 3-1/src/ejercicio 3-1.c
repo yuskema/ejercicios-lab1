@@ -12,20 +12,21 @@ recibe como parámetro.
 
 #include <stdio.h>
 #include <stdlib.h>
-int numeroEntero();
-int main(void) {
+void MostrarNumero(int numero);
+
+int main(void)
+{
 	setbuf(stdout,NULL);
 
-	int mostrar;
-	mostrar = numeroEntero();
-	printf("el numero entero es %d", mostrar);
+	int numero = 4;
+
+	MostrarNumero(numero);
 
 
 	return EXIT_SUCCESS;
 }
-int numeroEntero()
+
+void MostrarNumero(int numero)
 {
-	int numero;
-	numero=4;
-	return numero;
+	printf("el numero recibido es %d",numero);
 }
